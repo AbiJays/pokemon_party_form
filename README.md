@@ -1,4 +1,4 @@
-# pokemon_party_form
+# Pokemon Party Form
 Front-end javascript application where users input data of their pokemon, including a uniqueName, their Species, their type, and their  attacks
 # Homework: Manipulating the DOM
 
