@@ -9,17 +9,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const handleNewFormSubmit = function (event) {
     event.preventDefault(); //stops it from reloading the page
-    // console.log("issapokemon");
-    // console.dir(event.target);
-    // console.dir(event.target.species);
-    // console.log(event.target.species.value)
     
     const uniqueName = event.target.uniqueName.value;
     const species = event.target.species.value;
     const type = event.target.type.value;
     const attacks = event.target.attacks.value;
-
-    // console.log(species, type, attacks);
 
     const pokemonElement = document.createElement("li");
 
