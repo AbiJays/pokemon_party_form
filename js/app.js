@@ -8,20 +8,18 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const handleNewFormSubmit = function (event) {
-    event.preventDefault();
+    event.preventDefault(); //stops it from reloading the page
+    // console.log("issapokemon");
+    // console.dir(event.target);
+    // console.dir(event.target.species);
+    // console.log(event.target.species.value)
     
     const uniqueName = event.target.uniqueName.value;
     const species = event.target.species.value;
-    console.dir(event.target)
-    const type = event.target.checkboxObject.name;
-    
-    ('input[type=checkbox]').each(function () {
-        if (this.checked) {
-            console.log($(this).val()); 
-        }
-});
+    const type = event.target.type.value;
     const attacks = event.target.attacks.value;
 
+    // console.log(species, type, attacks);
 
     const pokemonElement = document.createElement("li");
 
@@ -41,13 +39,13 @@ const handleNewFormSubmit = function (event) {
     attacksElement.textContent = attacks;
     pokemonElement.appendChild(attacksElement);
 
-    const partylist = document.querySelector("#party-list");
-    partyList.appendChild(pokemonElement);
+    const list = document.querySelector("#party-list");
+    list.appendChild(pokemonElement);
     
-    // event.target.reset(); 
+    event.target.reset(); 
 };
 
 const handleDeleteAllClick = (event) => {
+    const partyList = document.querySelector("#party-list");
     partyList.innerHTML = ""
 };
-
